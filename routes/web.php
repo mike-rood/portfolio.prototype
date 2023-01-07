@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::group(['namespace' => 'App\Http\Controllers\Portfolio'], function () {
+    Route::get('/', 'IndexController')->name('portfolio.index');
+});
+
+
+
+Route::get('/welcome', function () {
     return view('welcome');
 });

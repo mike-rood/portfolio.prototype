@@ -1,4 +1,5 @@
 <header>
+    <div><a href="{{ route('portfolio.index') }}">Main page</a></div>
     @if (Route::has('login'))
     <div>
         @auth

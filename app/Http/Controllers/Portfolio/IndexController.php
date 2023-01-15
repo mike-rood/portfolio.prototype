@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller {
 
-    public function __invoke() 
+    public function __invoke()
     {
-        return view('components.portfolio.index');
+        return view('portfolio.index');
     }
 
 }

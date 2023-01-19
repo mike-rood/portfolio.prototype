@@ -3,7 +3,13 @@
     @if (Route::has('login'))
     <div>
         @auth
-        <a href="{{ url('/home') }}">Home</a>
+            <div>
+            <a href="{{ url('/home') }}">Home</a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <input type="submit" value="Logout">
+            </form>
+            </div>
         @else
         <a href="{{ route('login') }}">Log in</a>
 

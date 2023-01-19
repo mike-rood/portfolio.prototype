@@ -12,6 +12,26 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    const ROLE_ADMIN = 'admin';
+    const ROLE_USER = 'user';
+    const ROLE_MODERATOR = 'moderator';
+
+    public static function getRoles() {
+        return [
+            self::ROLE_ADMIN,
+            self::ROLE_USER,
+            self::ROLE_MODERATOR,
+        ];
+    }
+
+    public static function isThereAnyAdmin() {
+        return User::where('role', User::ROLE_ADMIN)->get()->count();
+    }
+
+    public static function setAsAdmin($id) {
+        return User::where('id', $id)->update(['role' => User::ROLE_ADMIN]);
+    }
+
     /**
      * The attributes that are mass assignable.
      *

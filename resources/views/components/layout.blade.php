@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <x-layouts.head/>
+    <x-head/>
     <body>
-        <x-layouts.header/>
+        <x-header/>
         {{ $slot }}
     </body>
 </html>

@@ -17,7 +17,11 @@ Route::group(['namespace' => 'App\Http\Controllers\Portfolio'], function () {
     Route::get('/', 'IndexController')->name('portfolio.index');
 });
 
+Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 'middleware' => ['admin.init', 'admin']], function () {
+   Route::get('/', 'IndexController')->name('admin.index');
+});
 
+Route::redirect('/home', '/');
 
 Route::get('/welcome', function () {
     return view('welcome');

@@ -1,3 +1,3 @@
-<x-layouts.app>
-    <p>Main section</p>    
-</x-layouts.app>
+<x-layout>
+    <p>Main section</p>
+</x-layout>

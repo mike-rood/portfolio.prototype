@@ -18,7 +18,15 @@ Route::group(['namespace' => 'App\Http\Controllers\Portfolio'], function () {
 });
 
 Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 'middleware' => ['admin.init', 'admin']], function () {
-   Route::get('/', 'IndexController')->name('admin.index');
+    Route::get('/', 'IndexController')->name('admin.index');
+    Route::group(['namespace' => 'Project', 'prefix' => 'project'], function () {
+        Route::group(['namespace' => 'Category', 'prefix' => 'category'], function () {
+            Route::get('/', 'IndexController')->name('admin.project.category.index');
+            Route::get('/create', 'CreateController')->name('admin.project.category.create');
+            Route::post('/store', 'StoreController')->name('admin.project.category.store');
+        });
+        Route::get('/', 'IndexController')->name('admin.project.index');
+    });
 });
 
 Route::redirect('/home', '/');

@@ -11,7 +11,7 @@
         </div>
         <div>
             <label for="category_description">Введите описание категории: </label>
-            <input type="text" name="category_description">
+            <input type="textarea" name="category_description">
         </div>
         <div>
             <input type="submit" value="Сохранить">

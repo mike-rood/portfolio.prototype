@@ -4,12 +4,7 @@
         <ul>
             <li>
                 <div>
-                <div>
-                    {{ $category->category_title }}
-                </div>
-                <div>
-                    {{ $category->category_description }}
-                </div>
+                    <a href="{{ route('admin.project.category.show', $category->id) }}">{{ $category->category_title }}</a>
                 </div>
             </li>
         </ul>

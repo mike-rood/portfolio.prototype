@@ -9,6 +9,7 @@
             </h4>
             <ul>
                 <li><a href="{{ route('admin.project.category.index') }}">Categories</a></li>
+                <li><a href="{{ route('admin.project.tag.index') }}">Tags</a></li>
             </ul>
         </li>
     </ul>

@@ -29,6 +29,13 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 
             Route::patch('/{category}', 'UpdateController')->name('admin.project.category.update');
             Route::delete('/{category}', 'DeleteController')->name('admin.project.category.delete');
         });
+        Route::group(['namespace' => 'Tag', 'prefix' => 'tag'], function() {
+            Route::get('/', 'IndexController')->name('admin.project.tag.index');
+            Route::post('/store', 'StoreController')->name('admin.project.tag.store');
+            Route::get('/{tag}/edit', 'EditController')->name('admin.project.tag.edit');
+            Route::patch('/{tag}', 'UpdateController')->name('admin.project.tag.update');
+            Route::delete('/{tag}', 'DeleteController')->name('admin.project.tag.delete');
+        });
         Route::get('/', 'IndexController')->name('admin.project.index');
     });
 });

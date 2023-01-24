@@ -13,7 +13,7 @@ class StoreRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,18 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'tag_title' => 'required|string|max:32'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'tag_title' => [
+                'required' => 'Tag title is required',
+                'string' => 'Title must be a string',
+                'max:32' => '32 chars max',
+            ],
         ];
     }
 }

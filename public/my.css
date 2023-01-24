@@ -1,0 +1,31 @@
+/* Borders */
+
+.border {
+    border-width: 1px;
+}
+
+.border-black {
+    border-color: rgb(0 0 0);
+}
+
+.border-solid {
+    border-style: solid;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+/* Flex */
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}

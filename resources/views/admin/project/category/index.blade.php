@@ -1,4 +1,5 @@
 <x-layout>
+    <section class="flex flex-col">
     <h1>Category</h1>
     @forelse($categories as $category)
         <ul>
@@ -14,4 +15,5 @@
     <div>
         <a href="{{ route('admin.project.category.create') }}">Добавить новую категорию</a>
     </div>
+    </section>
 </x-layout>

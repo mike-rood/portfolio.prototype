@@ -28,4 +28,18 @@ class StoreRequest extends FormRequest
             'category_description' => 'nullable|string'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'category_title' => [
+                'required' => 'The field is required',
+                'string' => 'The field must be a string',
+                'max:255' => 'The field must be less 256 chars',
+            ],
+            'category_description' => [
+                'string' => 'The field must be a string',
+            ],
+        ];
+    }
 }

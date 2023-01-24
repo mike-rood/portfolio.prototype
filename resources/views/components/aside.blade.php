@@ -1,5 +1,7 @@
 <aside>
-@if(Auth()->user()->role=='admin')
-    <x-admin.menu/>
-@endif
+    @auth()
+    @if(Auth()->user()->role=='admin')
+        <x-admin.menu/>
+    @endif
+    @endauth
 </aside>

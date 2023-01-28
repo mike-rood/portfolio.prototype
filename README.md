@@ -8,4 +8,4 @@
 </p>
 
 #npm update
-docker-compose exec laravel.test bash
+<p>sail exec laravel.test bash</p>

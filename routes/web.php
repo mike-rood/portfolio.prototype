@@ -37,6 +37,8 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 
             Route::delete('/{tag}', 'DeleteController')->name('admin.project.tag.delete');
         });
         Route::get('/', 'IndexController')->name('admin.project.index');
+        Route::get('/create', 'CreateController')->name('admin.project.create');
+        Route::post('/store', 'StoreController')->name('admin.project.store');
     });
 });
 

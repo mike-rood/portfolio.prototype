@@ -27,7 +27,7 @@
         <form action="{{ route('admin.project.tag.store') }}" method="POST">
             @csrf
             <div class="flex flex-row">
-                <label for="tag_title">Tag title:</label>
+                <label for="tag_title">Add tag: </label>
                 <input type="text" name="tag_title">
                 <input type="submit" value="Сохранить">
             </div>

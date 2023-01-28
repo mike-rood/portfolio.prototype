@@ -7,7 +7,7 @@
                 @method('PATCH')
                 <div class="flex flex-col">
                     <div class="flex flex-row">
-                        <label for="tag_title">Введите название категории</label>
+                        <label for="tag_title">Tag title: </label>
                         <input type="text" name="tag_title" value="{{ $tag->tag_title }}">
                         <input type="submit" value="Save">
                     </div>

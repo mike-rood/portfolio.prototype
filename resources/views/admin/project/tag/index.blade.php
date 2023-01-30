@@ -4,7 +4,7 @@
         @forelse($tags as $tag)
             <div class="flex flex-row">
                 <div>
-                    {{ $tag->tag_title }}
+                    {{ $tag->title }}
                 </div>
                 <div>
                     <a href="{{ route('admin.project.tag.edit', $tag->id) }}">
@@ -27,11 +27,11 @@
         <form action="{{ route('admin.project.tag.store') }}" method="POST">
             @csrf
             <div class="flex flex-row">
-                <label for="tag_title">Add tag: </label>
-                <input type="text" name="tag_title">
+                <label for="title">Add tag: </label>
+                <input type="text" name="title">
                 <input type="submit" value="Сохранить">
             </div>
-            @error('tag_title')
+            @error('title')
             <p>{{ $message }}</p>
             @enderror
         </form>

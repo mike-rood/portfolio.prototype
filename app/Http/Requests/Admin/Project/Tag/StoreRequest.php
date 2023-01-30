@@ -24,14 +24,14 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'tag_title' => 'required|string|max:32'
+            'title' => 'required|string|max:32'
         ];
     }
 
     public function messages()
     {
         return [
-            'tag_title' => [
+            'title' => [
                 'required' => 'Tag title is required',
                 'string' => 'Title must be a string',
                 'max:32' => '32 chars max',

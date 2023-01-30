@@ -24,20 +24,20 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'category_title' => 'required|string|max:255',
-            'category_description' => 'nullable|string'
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string'
         ];
     }
 
     public function messages()
     {
         return [
-            'category_title' => [
+            'title' => [
                 'required' => 'The field is required',
                 'string' => 'The field must be a string',
                 'max:255' => 'The field must be less 256 chars',
             ],
-            'category_description' => [
+            'description' => [
                 'string' => 'The field must be a string',
             ],
         ];

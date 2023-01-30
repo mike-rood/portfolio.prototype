@@ -1,25 +1,26 @@
 <x-layout>
-    <section class="flex flex-col">
+    <section class="flex flex-row">
     <h1>Project</h1>
         @forelse($projects as $project)
-            <div>
+            <div class="flex flex-col">
                 <h3>
                     {{ $project->title }}
                 </h3>
-                @isset($project->description)
-                    <div>
-                        {{ $project->description }}
-                    </div>
-                @endisset
+                <div>
+                    {{ $project->category->title }}
+                </div>
+                <div>
+                    {{ $project->description }}
+                </div>
                 @isset($project->link)
-                    <p>See the <a href="{{ url($project->link) }}" target="_blank">link</a></p>
+                    <p>Перейти к сайту: <a href="{{ url($project->link) }}" target="_blank">{{ $project->link }}</a></p>
                 @endisset
             </div>
         @empty
             <div>
                 <p>There are no projects</p>
-                <p><a href="{{ route('admin.project.create') }}">Add new project</a></p>
             </div>
         @endforelse
+        <p><a href="{{ route('admin.project.create') }}">Add new project</a></p>
     </section>
 </x-layout>

@@ -25,8 +25,9 @@ class StoreRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
-            'description' => 'string',
-            'link' => 'string',
+            'category_id' => 'required|integer|exists:categories,id',
+            'description' => 'required|string',
+            'link' => 'nullable|url',
         ];
     }
 }

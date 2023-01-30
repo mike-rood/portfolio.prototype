@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->index('category_id');
+            $table->foreignId('category_id')->constrained();
             $table->text('description');
             $table->string('link')->nullable();
             $table->timestamps();

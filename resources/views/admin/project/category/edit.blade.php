@@ -7,20 +7,20 @@
                 @method('PATCH')
                 <div>
                     <div>
-                        <label for="category_title">Введите название категории</label>
-                        <input type="text" name="category_title" value="{{ $category->category_title }}">
+                        <label for="title">Введите название категории</label>
+                        <input type="text" name="title" value="{{ $category->title }}">
                     </div>
-                    @error('category_title')
-                    <div>{{ $message }}</div>
+                    @error('title')
+                    <p>{{ $message }}</p>
                     @enderror
                 </div>
                 <div>
                     <div>
-                        <label for="category_title">Введите описание категории</label>
-                        <input type="text" name="category_title" value="{{ $category->category_description }}">
+                        <label for="description">Введите описание категории</label>
+                        <input type="text" name="description" value="{{ $category->description }}">
                     </div>
-                    @error('category_descroption')
-                    <div>{{ $message }}</div>
+                    @error('description')
+                    <p>{{ $message }}</p>
                     @enderror
                 </div>
                 <div>
